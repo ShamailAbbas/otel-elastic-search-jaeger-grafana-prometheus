@@ -16,8 +16,8 @@ spec:
         app: go-service-b-deployment
     spec:
       containers:
-      # - image: ankitjodhani/golang-svc-b:latest
-      - image: <<IMAGE_NAME_ID>>:<<TAG>>
+      - image: ankitjodhani/golang-svc-b:latest
+      # - image: <<IMAGE_NAME_ID>>:<<TAG>>
         name: service-a
         imagePullPolicy: Always
         ports:

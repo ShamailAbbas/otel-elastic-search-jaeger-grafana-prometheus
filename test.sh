@@ -1,14 +1,9 @@
 #!/bin/bash
 
-# Check if both load balancers are provided as input
-if [ $# -ne 2 ]; then
-    echo "Usage: $0 <LB-1 DNS> <LB-2 DNS>"
-    exit 1
-fi
 
-# Assign input arguments to variables
-LB1=$1
-LB2=$2
+# alb addresses
+LB1="k8s-dev-aservice-b8ad259f96-48023792f50ded6a.elb.us-east-1.amazonaws.com"
+LB2="k8s-dev-bservice-b5ff435d71-eb0adbc1d71336c7.elb.us-east-1.amazonaws.com"
 
 # Define available routes for LB1 and LB2
 LB1_ROUTES=("/call-b" "/hello-a" "/getme-coffee")
